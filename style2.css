@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto:wght@500&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-text-color: #183b56;
+    --secondary-text-color: #577592;
+    --accent-color: #2294ed;
+    --accent-color-dark: #1d69a3;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: var(--primary-text-color);
+}
+
+p {
+    font-family: "Roboto", sans-serif;
+    color: var(--secondary-text-color);
+    line-height: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    max-width: 1180px;
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+nav {
+    background-color: #f3faff;
+    box-shadow: 0 0 4px #bbd0e2;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    left: 0;
+    right: 0;
+}
+
+.main-nav {
+    justify-content: space-between;
+    padding-block: 8px;
+}
+
+.company-logo img {
+    width: 120px;
+    mix-blend-mode: multiply;
+    filter: contrast(1);
+}
+
+.nav-links ul {
+    gap: 16px;
+}
+
+.hover-link {
+    cursor: pointer;
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+}
+
+.hover-link:active {
+    color: red;
+}
+
+.nav-item.active {
+    color: var(--accent-color);
+}
+
+.search-bar {
+    height: 32px;
+    gap: 8px;
+}
+
+.news-input {
+    width: 200px;
+    height: 100%;
+    padding-inline: 12px;
+    border-radius: 4px;
+    border: 2px solid #bbd0e2;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button {
+    background-color: var(--accent-color);
+    color: white;
+    padding: 8px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Roboto", sans-serif;
+}
+
+.search-button:hover {
+    background-color: var(--accent-color-dark);
+}
+
+main {
+    padding-block: 20px;
+    margin-top: 80px;
+}
+
+.cards-container {
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    align-items: start;
+}
+
+.card {
+    width: 360px;
+    min-height: 400px;
+    box-shadow: 0 0 4px #d4ecff;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #fff;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 1px 1px 8px #d4ecff;
+    background-color: #f9fdff;
+    transform: translateY(-2px);
+}
+
+.card-header img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 12px;
+}
+
+.news-source {
+    margin-block: 12px;
+}
+
+@media screen and (max-width: 600px) {
+    body {
+      font-size: 14px; /* Adjust the font size or any other styles as needed */
+    }
+  
+    nav {
+      height: auto; /* Adjust the navigation height for smaller screens */
+    }
+  
+    .company-logo img {
+      width: 120px; /* Adjust the logo size for smaller screens */
+    }
+  
+    .nav-links {
+      display: none; /* Hide the navigation links */
+      flex-direction: column; /* Stack the navigation links vertically */
+      align-items: center; /* Center align the stacked navigation links */
+      position: absolute;
+      top: 60px; /* Adjust the top position to avoid overlapping with the logo */
+      left: 0;
+      width: 100%;
+      background-color: #f3faff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+  
+    .nav-links ul {
+      padding: 10px;
+    }
+  
+    .hover-link {
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .nav-links.active {
+      display: flex; /* Show the navigation links when active */
+    }
+  
+    .burger-menu {
+      display: flex; /* Display the burger menu icon */
+      cursor: pointer;
+    }
+  
+    .burger-menu div {
+      width: 25px;
+      height: 3px;
+      background-color: var(--primary-color);
+      margin: 6px 0;
+      transition: 0.4s;
+    }
+  
+    .burger-menu.active div:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .burger-menu.active div:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .burger-menu.active div:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+  
+    .search-bar {
+      flex-direction: row; /* Align search input and button side by side */
+      align-items: center;
+      justify-content: space-between; /* Add space between input and button */
+      margin-top: 10px; /* Add some space above the search bar */
+    }
+  
+    .news-input {
+      width: 48%; /* Make the search input 48% width */
+    }
+  
+    .search-button {
+      width: 48%; /* Make the search button 48% width */
+    }
+  
+    .card {
+      width: 100%; /* Make cards full width on smaller screens */
+    }
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  .nav-links ul li {
+    width: 100%;
+    text-align: center;
+  }
