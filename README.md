@@ -14,8 +14,6 @@ A simple and stylish news portal created with HTML, CSS, and JavaScript, utilizi
 ## Getting Started
 1. Clone the repository:
 
-```git clone https://github.com/your-username/byte-bulletin.git```
-
 2. Open index.html in your web browser.
 
 3. Explore the latest news articles displayed on the portal.
